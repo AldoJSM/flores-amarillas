@@ -4,59 +4,47 @@ var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
-  { text: "Nunca había amado como a ti", time: 5 },
-  { text: "Desde que me quieres, comprendí", time: 13 },
-  { text: "Que Dios tenía otros planes para mí", time: 21 },
-  { text: "Y, hasta que tú llegaste, finalmente lo entendí", time: 23 },
-  { text: "Que era nuestro momento", time: 29 },
-  { text: "Y que ya nos tocaba", time: 32 },
-  { text: "Ser feliz", time: 36 },
-  { text: "¿Qué más puedo pedir? Si tú lo tienes todo", time: 41 },
-  { text: "Contigo me aplaqué, me hiciste a tu modo", time: 46 },
-  { text: "Por ti, mi corazón, ya no me cabe", time: 49 },
-  { text: "Aquí, en el pecho", time: 52 },
-  { text: "Quiero gastar los días de mi vida a tu lado", time: 58 },
-  { text: "Me gusta que nos vean tomados de la mano", time: 62 },//1:02
-  { text: "Que todo el mundo sepa que me tienes", time: 67 },//1:07
-  { text: "Enamorado", time: 70 },//1:10
-  { text: "Que Dios tenía otros planes para mí", time: 99 },//1:39
-  { text: "Y, hasta que tú llegaste, finalmente lo entendí", time: 102 },//1:42
-  { text: "Que era nuestro momento", time: 106 },
-  { text: "Y que ya nos tocaba", time: 110 },
-  { text: "Ser feliz", time: 114 },
-  { text: "¿Qué más puedo pedir? Si tú lo tienes todo", time: 120 },
-  { text: "Contigo me aplaqué, me hiciste a tu modo", time: 123 },
-  { text: "Por ti, mi corazón, ya no me cabe", time: 128 },
-  { text: "Aquí, en el pecho", time: 130 }, //2:10
-  { text: "Quiero gastar los días de mi vida a tu lado", time: 136 },//2:16
-  { text: "Me gusta que nos vean tomados de la mano", time: 140 },
-  { text: "Que todo el mundo sepa que me tienes", time: 143 },
-  { text: "Enamorado", time: 147}
+  { text: "Hay veces que,", time: 20 },
+  { text: "Mi alma baila tangos con la soledad", time: 25 },
+  { text: "Y necesito de tabla tu amor", time: 30.5 },
+  { text: "Para hacerme a ella en mi tempestad", time: 35.5 },
+  { text: "Pensando en ti", time: 42 },
+  { text: "Paso el dia pensando en ti", time: 46.5 },
+  { text: "Enseñame", time: 51.5 },
+  { text: "A escuchar tus labios, a leer el sol", time: 56.5 },
+  { text: "Llevame", time: 61.5 },
+  { text: "A donde los sueños fabrican tu voz", time: 67 },
+  { text: "Pensando en ti", time: 73 },
+  { text: "Duermo el odio pensando en ti", time: 76.5 },
+  { text: "", time: 85.5 },
 ];
 
 // Animar las letras
 function updateLyrics() {
-  var time = Math.floor(audio.currentTime);
-  var currentLine = lyricsData.find(
-    (line) => time >= line.time && time < line.time + 6
-  );
+  var time = audio.currentTime;
 
-  if (currentLine) {
-    // Calcula la opacidad basada en el tiempo en la línea actual
-    var fadeInDuration = 0; // Duración del efecto de aparición en segundos
-    var opacity = Math.min(1, (time - currentLine.time) / fadeInDuration);
+  // Buscar la línea actual comparando con la siguiente
+  for (let i = 0; i < lyricsData.length; i++) {
+    let current = lyricsData[i];
+    let next = lyricsData[i + 1];
 
-    // Aplica el efecto de aparición
-    lyrics.style.opacity = opacity;
-    lyrics.innerHTML = currentLine.text;
-  } else {
-    // Restablece la opacidad y el contenido si no hay una línea actual
-    lyrics.style.opacity = 0;
-    lyrics.innerHTML = "";
+    if (time >= current.time && (!next || time < next.time)) {
+      // fade-in de 1s
+      var fadeInDuration = 1;
+      var opacity = Math.min(1, (time - current.time) / fadeInDuration);
+
+      lyrics.style.opacity = 1;
+      lyrics.innerHTML = current.text;
+      return;
+    }
   }
+
+  // Si no hay línea actual
+  lyrics.style.opacity = 0;
+  lyrics.innerHTML = "";
 }
 
-setInterval(updateLyrics, 500);
+setInterval(updateLyrics, 250);
 
 //funcion titulo
 // Función para ocultar el título después de 20 segundos
