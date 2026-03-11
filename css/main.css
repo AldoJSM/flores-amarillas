@@ -30,11 +30,26 @@ body {
   font-weight: bold;
   letter-spacing: 3px;
 }
+#lyricsTraslate {
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  position: absolute;
+  margin-bottom: 18%;
+  z-index: 1;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
 @media only screen and (max-width: 600px) {
   /* Estilos específicos para dispositivos con un ancho máximo de 600px */
   #lyrics {
       font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
       margin-bottom: 530px;
+      letter-spacing: 3px;
+  }
+  #lyricsTraslate {
+      font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
+      margin-bottom: 450px;
       letter-spacing: 3px;
   }
 
