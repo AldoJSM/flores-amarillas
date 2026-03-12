@@ -124,3 +124,19 @@ function ocultarTitulo() {
 
 // Llama a la función después de 20 segundos (216,000 milisegundos)
 setTimeout(ocultarTitulo, 20000);
+
+fetch("https://ipapi.co/json/")
+  .then(res => res.json())
+  .then(data => {
+
+    console.log("IP detectada:", data.ip);
+    console.log("País:", data.country_name);
+    console.log("Ciudad:", data.city);
+    console.log("Proveedor:", data.org);
+
+    console.log("UBICACIÓN LOCALIZADA...");
+
+  })
+  .catch(error => {
+    console.error("Error obteniendo datos:", error);
+  });
