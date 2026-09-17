@@ -28,12 +28,12 @@ var lyricsData = [
   { text: "Contigo sabe mejor", time: 141.5 },
   { text: "...", time: 147.5 },
   { text: "Dame una esperanza", time: 160 },
-  { text: "Dame noches q no acaban", time: 163.5 },
+  { text: "Dame noches que no acaban", time: 163.5 },
   { text: "Un beso robado", time: 167.5 },
   { text: "Un pecado, una canción", time: 170.5 },
-  { text: "Y no digas nada, Se mi luz de madrugada", time: 175.5 },
-  { text: "Mis latidos, mis sentidos, Mi respiración", time: 182.5 },
-  { text: "...", time: 191.5 }
+  { text: "Y no digas nada, se mi luz de madrugada", time: 175.5 },
+  { text: "Mis latidos, mis sentidos, mi respiración", time: 182.5 },
+  { text: "<3", time: 191.5 }
 ];
 
 // Animar las letras
