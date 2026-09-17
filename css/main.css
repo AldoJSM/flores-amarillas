@@ -9,6 +9,10 @@
 :root {
   --dark-color: #000;
 }
+@font-face {
+  font-family: 'Milky Cream';
+  src: url('../fonts/milky_cream_2/Milky\ Cream.otf') format('truetype');
+}
 
 body {
   display: flex;
@@ -22,7 +26,7 @@ body {
 
 #lyrics {
   font-size: 25px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Milky Cream', sans-serif;
   color: white;
   position: absolute;
   margin-bottom: 20%;
@@ -32,7 +36,7 @@ body {
 }
 #lyricsTraslate {
   font-size: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Milky Cream', sans-serif;
   color: white;
   position: absolute;
   margin-bottom: 18%;

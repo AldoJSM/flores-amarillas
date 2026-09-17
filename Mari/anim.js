@@ -3,20 +3,37 @@ var audio = document.querySelector("audio");
 var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
+//Cancion https://youtu.be/kZmjdQL-SwY?si=nM48hVoU9lk_5uxY
 var lyricsData = [
-  { text: "Hay veces que,", time: 20 },
-  { text: "Mi alma baila tangos con la soledad", time: 25 },
-  { text: "Y necesito de tabla tu amor", time: 30.5 },
-  { text: "Para hacerme a ella en mi tempestad", time: 35.5 },
-  { text: "Pensando en ti", time: 42 },
-  { text: "Paso el dia pensando en ti", time: 46.5 },
-  { text: "Enseñame", time: 51.5 },
-  { text: "A escuchar tus labios, a leer el sol", time: 56.5 },
-  { text: "Llevame", time: 61.5 },
-  { text: "A donde los sueños fabrican tu voz", time: 67 },
-  { text: "Pensando en ti", time: 73 },
-  { text: "Duermo el odio pensando en ti", time: 76.5 },
-  { text: "", time: 85.5 },
+  { text: "Dame lo que esconde tu mirada,", time: 14 },
+  { text: "Y te doy el lado izquierdo de mi pecho", time: 21 },
+  { text: "Dame lo que se te de la gana", time: 29 },
+  { text: "A tus pies el mundo entero por un beso", time: 35.5 },
+  { text: "Te regalo toda la luz de la luna", time: 43.5 },
+  { text: "Mi pasado, mi fortuna", time: 49 },
+  { text: "Mi futuro, mi razón", time: 53 },
+  { text: "Esta noche no la cambio por ninguna", time: 58 },
+  { text: "Si esta vida es solo una", time: 63.5 },///
+  { text: "Contigo sabe mejor", time: 67.5 },
+  {text: "...", time: 73 },
+  { text: "Dame el universo de tu cama", time: 88 },
+  { text: "Y te doy mi vida entera y mucho más", time: 94.5 },
+  { text: "Dame alguna de tus madrugadas", time: 103 },
+  { text: "Y te doy mi corazón por la mitad", time: 110 },
+  { text: "Te regalo toda la luz de la luna", time: 117 },
+  { text: "Mi pasado, mi fortuna", time: 123 },
+  { text: "Mi futuro, mi razón", time: 126.5 },
+  { text: "Esta noche no la cambio por ninguna", time: 132 },
+  { text: "Si esta vida es solo una", time: 137.5 },
+  { text: "Contigo sabe mejor", time: 141.5 },
+  { text: "...", time: 147.5 },
+  { text: "Dame una esperanza", time: 160 },
+  { text: "Dame noches q no acaban", time: 163.5 },
+  { text: "Un beso robado", time: 167.5 },
+  { text: "Un pecado, una canción", time: 170.5 },
+  { text: "Y no digas nada, Se mi luz de madrugada", time: 175.5 },
+  { text: "Mis latidos, mis sentidos, Mi respiración", time: 182.5 },
+  { text: "...", time: 191.5 }
 ];
 
 // Animar las letras
@@ -58,4 +75,4 @@ function ocultarTitulo() {
 }
 
 // Llama a la función después de 20 segundos (216,000 milisegundos)
-setTimeout(ocultarTitulo, 20000);
+setTimeout(ocultarTitulo, 14000);
